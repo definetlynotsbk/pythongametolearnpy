@@ -1,3 +1,2 @@
 # pythongametolearnpy
-title
-ohh lmao ik hwo this worksnow
+# ohh lmao ik hwo this worksnow
