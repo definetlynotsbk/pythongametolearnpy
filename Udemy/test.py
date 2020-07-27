@@ -8,4 +8,4 @@ password = input("Enterpass: ")
 if spccharcheck == True:
     print('has specail char')
 else:
-    print('noob')
+    print('noobsmit2001')
