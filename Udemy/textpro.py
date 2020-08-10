@@ -7,9 +7,9 @@ def phrase_check(oof):
 
 ui = ""
 mylist = []
-while 1 == 1:
+while True:
     ui = (input("say something:"))
-    if ui == "\end":
+    if ui == "/end":
         break
     else:
         mylist.append(phrase_check(ui.capitalize()))

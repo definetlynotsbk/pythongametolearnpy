@@ -22,7 +22,7 @@ def SUorLI(userchoice):
                     print('1 more chance!')
                 else:
                     print('no more chances!')
-#passcheckfunc--done but add 3 chances if you want
+#passcheckfunc
 import base64
 def loginpassscheck(PASSWORD, Exmail):
     with open('logindetails.txt') as content:
@@ -43,12 +43,12 @@ def loginmailcheck(Exmail):
         cr = content.read()
         while i > 0:
             if cr.__contains__(Exmail):
-                return True
+                return True,Exmail
             else:
                 print('please enter mail again!')
-                Exmail = input('enter your mail: ')
-                if cr.__contains__(Exmail):
-                    return True
+                email = input('enter your mail: ')
+                if cr.__contains__(email):
+                    return True,email
                 else:
                     i -= 1
                     if i == 2:
@@ -87,7 +87,8 @@ print('If you have an account please login, if not signup!')
 suorli = SUorLI(input('do you want to login or signup?(login/signup): '))
 if suorli == 'LI':
     Exmail = input('enter your mail: ')
-    if loginmailcheck(Exmail) == True:
+    flag, Exmail=loginmailcheck(Exmail)
+    if flag == True:
         PASSWORD = input('Enter your password: ')
         if loginpassscheck(PASSWORD, Exmail) == True:
             print('You have logged in!')
